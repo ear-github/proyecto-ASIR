@@ -15,15 +15,25 @@
 # Control
 
   La idea se centra en el PC miniaturizado Raspberry Pi, que hará de controlador del sistema. A este conectaremos por USB los siguientes elementos:
+  
   •	Teclado personalizado de 10 botones desde el que se ejecutarán las órdenes básicas del equipamiento audiovisual.
+  
     o	Encendido y apagado general.
+    
     o	Activación y desactivación del videoproyector.
+    
     o	Subida y bajada del volumen del micrófono del docente.
+    
     o	Subida y bajada de los altavoces de la sala.
-  •	Interfaces USB-RS232 para controlar
+    
+  •	Interfaces USB-RS232 para controlar:
+  
     o	Videoproyector
+    
     o	Amplificador-mezclador de audio
-    o	(Opcional más adelante) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
+    
+    o	(Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
+    
 
   Una pantalla de proyección común incorpora su propio panel de botones que accionan los relés de movimiento de subida y bajada. Para controlarlo conectaremos el puerto GPIO de la Raspberry a este panel mediante un optoacoplador (con el que aislamos nuestra Raspberry del circuito del motor la pantalla).
 Mediante software se pretende programar la Raspberry para que, en función del botón pulsado, se comunique por puerto serie con los equipos que sea necesario. Por ejemplo, el botón de puesta en marcha realizaría lo siguiente:
@@ -39,9 +49,13 @@ Mediante software se pretende programar la Raspberry para que, en función del b
   El controlador de los medios (RPi) albergará una interfaz web por medio de la que se podrá:
   
   •	Consultar el estado del equipamiento en el momento por si existe alguna incidencia o anomalía. Para ello el controlador enviaría las señales oportunas a los equipos vía RS-232.
+  
   •	Controlar o reajustar parámetros del equipo del aula.
+  
   •	Visualizar un histórico de operaciones, (encendido, selección, consulta…) para dar la posibilidad de un seguimiento de uso. Cada operación que haga el controlador deberá ser recogida en un archivo log.
+  
   •	Enviar al controlador un archivo con los comandos de comunicación RS-232 actualizados en caso de que alguno de los equipos debiera ser sustituido por un modelo diferente. El controlador tendría una base de datos con diferentes modelos y los códigos correspondientes para cada operación.
+  
 
 
 # Medios necesarios
@@ -49,17 +63,29 @@ Mediante software se pretende programar la Raspberry para que, en función del b
   Para la realización de este proyecto se necesita lo siguiente:
   
   •	Un ordenador PC de configuración media que hará de ordenador del aula.
+  
   •	Un miniordenador Raspberry Pi 3B
+  
   •	Un videoproyector con entrada HDMI y puerto serie RS-232.
+  
   •	Cableado HDMI.
+  
   •	Conmutador de vídeo con puerto serie RS-232.
+  
   •	Amplificador-mezclador de audio con interfaz RS-232.
+  
   •	Altavoces.
+  
   •	Cableado de audio.
+  
   •	Teclado pequeño de 10 teclas.
+  
   •	Interfaces USB- RS232.
+  
   •	Switch Ethernet
+  
   •	Cableado de red para el PC de la mesa y la Raspberry.
+  
 
     
     
