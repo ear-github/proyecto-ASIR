@@ -1,0 +1,2 @@
+# proyecto-ASIR
+Gestión y control de medios audiovisuales en un aula de docencia. Proyecto integrado para el curso 2020-2021 del ciclo Administración de Sistemas Informáticos en Red (ASIR) en el IES Francisco Romero Vargas. El objetivo básico de este proyecto consiste en la automatización del equipamiento audiovisual de un aula de docencia, de manera que ofrezca al profesor la mayor sencillez posible en el manejo de los equipos, así como que permita al administrador de los medios la consulta, supervisión y control de estos tanto en el sitio como de forma remota.
