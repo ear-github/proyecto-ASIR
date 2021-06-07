@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}
+Medios Audiovisuales
+{% endblock %}
+{% block contenido %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <br/>
+      {% if current_user.is_authenticated and current_user.is_admin()  %}
+      <a class="btn btn-primary" href="{{url_for('dispositivo_new')}}" role="button">Nuevo dispositivo</a>
+      <br><br>
+      <p>Descargar logs:</p>
+      <a class="btn btn-primary" href="{{url_for('descargar_log_web')}}" role="button">Log web</a><br><br>
+      <a class="btn btn-primary" href="{{url_for('descargar_log_botonera')}}" role="button">Log botonera</a> 
+      {% endif %}
+      <br/>
+    </div>
+    <div class="col-md-10">
+      <div id="loading" class="d-flex p-2"><br>  Cargando dispositivo...
+      </div>
+      <div class="panel panel-default">
+      <h2>Botón 1</h2>
+      <div class="form-group">
+          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
+      </div>
+      <div class="form-group">
+          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
+      </div>
+      <div class="form-group">
+          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
+      </div>
+      <div class="form-group">
+          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
+      </div>
+
+
+
+      </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".load-device").click(function(e){
+          $("#loading").show();
+        })
+      });
+    </script>
+
+    {% endblock %}

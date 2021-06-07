@@ -1,0 +1,418 @@
+INFO:werkzeug: * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/05 20:36:25 INFO:  * Restarting with stat
+2021/06/05 20:58:17 INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021/06/05 20:58:17 INFO:  * Restarting with stat
+2021/06/05 20:58:19 WARNING:  * Debugger is active!
+2021/06/05 20:58:19 INFO:  * Debugger PIN: 575-620-793
+2021/06/05 20:58:23 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021/06/05 20:58:23 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:23] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2021/06/05 20:58:23 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:23] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 20:58:23 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:23] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2021/06/05 20:58:25 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:25] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2021/06/05 20:58:25 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:25] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 20:58:26 INFO: 127.0.0.1 - - [05/Jun/2021 20:58:26] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 21:00:55 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/05 21:00:56 INFO:  * Restarting with stat
+2021/06/05 21:00:58 WARNING:  * Debugger is active!
+2021/06/05 21:00:58 INFO:  * Debugger PIN: 575-620-793
+2021/06/05 21:00:59 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:00:59 INFO: 127.0.0.1 - - [05/Jun/2021 21:00:59] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:01:47 INFO: /vp_ex320u.html Dispositivo con id = 1.
+2021/06/05 21:01:47 INFO: 127.0.0.1 - - [05/Jun/2021 21:01:47] "[37mGET /dispositivo/1 HTTP/1.1[0m" 200 -
+2021/06/05 21:03:54 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/05 21:03:54 INFO:  * Restarting with stat
+2021/06/05 21:03:57 WARNING:  * Debugger is active!
+2021/06/05 21:03:57 INFO:  * Debugger PIN: 575-620-793
+2021/06/05 21:04:35 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/05 21:04:35 INFO:  * Restarting with stat
+2021/06/05 21:04:38 WARNING:  * Debugger is active!
+2021/06/05 21:04:38 INFO:  * Debugger PIN: 575-620-793
+2021/06/05 21:04:47 INFO: 127.0.0.1 - - [05/Jun/2021 21:04:47] "[37mGET /categorias HTTP/1.1[0m" 200 -
+2021/06/05 21:27:52 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/05 21:27:53 INFO:  * Restarting with stat
+2021/06/05 21:30:49 INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021/06/05 21:30:49 INFO:  * Restarting with stat
+2021/06/05 21:30:51 WARNING:  * Debugger is active!
+2021/06/05 21:30:51 INFO:  * Debugger PIN: 575-620-793
+2021/06/05 21:30:52 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:30:53 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021/06/05 21:30:53 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:53] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2021/06/05 21:30:53 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:53] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 21:30:53 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:53] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2021/06/05 21:30:54 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:54] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2021/06/05 21:30:55 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:55] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 21:30:56 INFO: 127.0.0.1 - - [05/Jun/2021 21:30:56] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 21:31:31 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:31:31 INFO: 127.0.0.1 - - [05/Jun/2021 21:31:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021/06/05 21:31:31 INFO: 127.0.0.1 - - [05/Jun/2021 21:31:31] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2021/06/05 21:31:31 INFO: 127.0.0.1 - - [05/Jun/2021 21:31:31] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 21:31:31 INFO: 127.0.0.1 - - [05/Jun/2021 21:31:31] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2021/06/05 21:31:32 INFO: 127.0.0.1 - - [05/Jun/2021 21:31:32] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2021/06/05 21:31:33 INFO: 127.0.0.1 - - [05/Jun/2021 21:31:33] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 21:33:02 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:33:02 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:02] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:33:34 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:33:34 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:34] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:33:39 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[37mGET /static/img/mitsubishi_ex320u.jpg HTTP/1.1[0m" 200 -
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[37mGET /static/img/ecler_ca40.jpeg HTTP/1.1[0m" 200 -
+2021/06/05 21:33:39 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:39] "[37mGET /static/img/greeberet.jpg HTTP/1.1[0m" 200 -
+2021/06/05 21:33:40 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/05 21:33:59 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:33:59 INFO: 127.0.0.1 - - [05/Jun/2021 21:33:59] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:34:00 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:00] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/05 21:34:00 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:00] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/05 21:34:00 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:00] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 21:34:00 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:00] "[37mGET /static/img/mitsubishi_ex320u.jpg HTTP/1.1[0m" 200 -
+2021/06/05 21:34:00 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:00] "[37mGET /static/img/ecler_ca40.jpeg HTTP/1.1[0m" 200 -
+2021/06/05 21:34:00 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:00] "[37mGET /static/img/greeberet.jpg HTTP/1.1[0m" 200 -
+2021/06/05 21:34:01 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/05 21:34:07 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:07] "[35m[1mGET /descargar_log HTTP/1.1[0m" 500 -
+2021/06/05 21:34:07 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:07] "[37mGET /descargar_log?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2021/06/05 21:34:07 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:07] "[37mGET /descargar_log?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 21:34:07 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:07] "[37mGET /descargar_log?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2021/06/05 21:34:08 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:08] "[37mGET /descargar_log?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2021/06/05 21:34:09 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:09] "[37mGET /descargar_log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 21:34:10 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:10] "[37mGET /descargar_log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/05 21:34:41 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/05 21:34:41 INFO:  * Restarting with stat
+2021/06/05 21:34:44 WARNING:  * Debugger is active!
+2021/06/05 21:34:44 INFO:  * Debugger PIN: 575-620-793
+2021/06/05 21:34:48 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:34:48 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:48] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:34:49 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:49] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/05 21:34:49 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:49] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/05 21:34:49 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:49] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/05 21:34:49 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:49] "[37mGET /static/img/mitsubishi_ex320u.jpg HTTP/1.1[0m" 200 -
+2021/06/05 21:34:49 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:49] "[37mGET /static/img/ecler_ca40.jpeg HTTP/1.1[0m" 200 -
+2021/06/05 21:34:49 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:49] "[37mGET /static/img/greeberet.jpg HTTP/1.1[0m" 200 -
+2021/06/05 21:34:50 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/05 21:34:52 INFO: 127.0.0.1 - - [05/Jun/2021 21:34:52] "[37mGET /descargar_log HTTP/1.1[0m" 200 -
+2021/06/05 21:35:34 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:35:34 INFO: 127.0.0.1 - - [05/Jun/2021 21:35:34] "[37mGET /categoria/1 HTTP/1.1[0m" 200 -
+2021/06/05 21:35:37 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:35:37 INFO: 127.0.0.1 - - [05/Jun/2021 21:35:37] "[37mGET /categoria/2 HTTP/1.1[0m" 200 -
+2021/06/05 21:35:40 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:35:40 INFO: 127.0.0.1 - - [05/Jun/2021 21:35:40] "[37mGET /categoria/1 HTTP/1.1[0m" 200 -
+2021/06/05 21:36:54 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:36:54 INFO: 127.0.0.1 - - [05/Jun/2021 21:36:54] "[37mGET /categoria/1 HTTP/1.1[0m" 200 -
+2021/06/05 21:37:01 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:01] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021/06/05 21:37:01 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:01] "[37mGET /login HTTP/1.1[0m" 200 -
+2021/06/05 21:37:04 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:37:04 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:37:09 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:09] "[37mGET /login HTTP/1.1[0m" 200 -
+2021/06/05 21:37:17 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021/06/05 21:37:17 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:37:17 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:17] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/05 21:37:22 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:22] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021/06/05 21:37:22 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:22] "[37mGET /login HTTP/1.1[0m" 200 -
+2021/06/05 21:37:28 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021/06/05 21:37:28 INFO: /inicio.html Llamada a página principal
+2021/06/05 21:37:28 INFO: 127.0.0.1 - - [05/Jun/2021 21:37:28] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 10:40:28 INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021/06/06 10:40:28 INFO:  * Restarting with stat
+2021/06/06 10:40:30 WARNING:  * Debugger is active!
+2021/06/06 10:40:30 INFO:  * Debugger PIN: 575-620-793
+2021/06/06 10:47:02 INFO: /inicio.html Llamada a página principal
+2021/06/06 10:47:02 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:02] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 10:47:03 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2021/06/06 10:47:03 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:03] "[36mGET /static/js/jquery.js HTTP/1.1[0m" 304 -
+2021/06/06 10:47:03 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:03] "[36mGET /static/img/mitsubishi_ex320u.jpg HTTP/1.1[0m" 304 -
+2021/06/06 10:47:03 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:03] "[36mGET /static/img/ecler_ca40.jpeg HTTP/1.1[0m" 304 -
+2021/06/06 10:47:03 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:03] "[36mGET /static/img/greeberet.jpg HTTP/1.1[0m" 304 -
+2021/06/06 10:47:04 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 10:47:44 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:44] "[36mGET /static/img/loading.gif HTTP/1.1[0m" 304 -
+2021/06/06 10:47:44 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:47:44 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:44] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:47:58 INFO: /mx_ca40.html Orden: 'set_master_vol', parámetro: '22', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 10:47:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:47:59] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:48:02 INFO: /mx_ca40.html Orden: 'set_master_vol', parámetro: '6', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 10:48:03 INFO: 127.0.0.1 - - [06/Jun/2021 10:48:03] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:48:04 INFO: /mx_ca40.html Orden: 'set_master_vol', parámetro: '20', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 10:48:05 INFO: 127.0.0.1 - - [06/Jun/2021 10:48:05] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:48:32 INFO: /mx_ca40.html Orden: 'set_master_vol', parámetro: '39', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 10:48:32 INFO: 127.0.0.1 - - [06/Jun/2021 10:48:32] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:53:18 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:53:18 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:18] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:53:26 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:53:26 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:26] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:53:27 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:27] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 10:53:27 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:27] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 10:53:27 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 10:53:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:59] "[32mGET /dispositivo/2 HTTP/1.1[0m" 302 -
+2021/06/06 10:53:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:59] "[37mGET /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 200 -
+2021/06/06 10:53:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:59] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 10:53:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:53:59] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 10:54:00 INFO: 127.0.0.1 - - [06/Jun/2021 10:54:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 10:54:05 INFO: 127.0.0.1 - - [06/Jun/2021 10:54:05] "[32mPOST /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 302 -
+2021/06/06 10:54:05 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:54:05 INFO: 127.0.0.1 - - [06/Jun/2021 10:54:05] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:57:43 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:57:43 INFO: 127.0.0.1 - - [06/Jun/2021 10:57:43] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:57:43 INFO: 127.0.0.1 - - [06/Jun/2021 10:57:43] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 10:57:44 INFO: 127.0.0.1 - - [06/Jun/2021 10:57:44] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 10:57:45 INFO: 127.0.0.1 - - [06/Jun/2021 10:57:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 10:57:59 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:57:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:57:59] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:57:59 INFO: 127.0.0.1 - - [06/Jun/2021 10:57:59] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 10:58:00 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:00] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 10:58:01 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 10:58:13 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:13] "[32mGET /dispositivo/2 HTTP/1.1[0m" 302 -
+2021/06/06 10:58:13 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:13] "[37mGET /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 200 -
+2021/06/06 10:58:14 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:14] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 10:58:14 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:14] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 10:58:15 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 10:58:21 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:21] "[32mPOST /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 302 -
+2021/06/06 10:58:21 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:58:21 INFO: 127.0.0.1 - - [06/Jun/2021 10:58:21] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 10:59:52 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 10:59:52 INFO: 127.0.0.1 - - [06/Jun/2021 10:59:52] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:05:55 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:05:55 INFO: 127.0.0.1 - - [06/Jun/2021 11:05:55] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:11:03 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:11:03 INFO: 127.0.0.1 - - [06/Jun/2021 11:11:03] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:11:13 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:11:13 INFO: 127.0.0.1 - - [06/Jun/2021 11:11:13] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:11:13 INFO: 127.0.0.1 - - [06/Jun/2021 11:11:13] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:11:14 INFO: 127.0.0.1 - - [06/Jun/2021 11:11:14] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:11:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:11:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:11:47 INFO: /mx_ca40.html Orden: 'set_master_vol', parámetro: '39', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 11:11:47 INFO: 127.0.0.1 - - [06/Jun/2021 11:11:47] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:12:46 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:12:46 INFO: 127.0.0.1 - - [06/Jun/2021 11:12:46] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:17:56 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:17:56 INFO: 127.0.0.1 - - [06/Jun/2021 11:17:56] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:26:38 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:26:39 INFO: 127.0.0.1 - - [06/Jun/2021 11:26:39] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:27:29 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:27:29 INFO: 127.0.0.1 - - [06/Jun/2021 11:27:29] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:27:34 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:27:34 INFO: 127.0.0.1 - - [06/Jun/2021 11:27:34] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:27:35 INFO: 127.0.0.1 - - [06/Jun/2021 11:27:35] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:27:35 INFO: 127.0.0.1 - - [06/Jun/2021 11:27:35] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:27:36 INFO: 127.0.0.1 - - [06/Jun/2021 11:27:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:28:11 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:28:11 INFO: 127.0.0.1 - - [06/Jun/2021 11:28:11] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:28:11 INFO: 127.0.0.1 - - [06/Jun/2021 11:28:11] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:28:11 INFO: 127.0.0.1 - - [06/Jun/2021 11:28:11] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:28:12 INFO: 127.0.0.1 - - [06/Jun/2021 11:28:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:32:19 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:32:19 INFO: 127.0.0.1 - - [06/Jun/2021 11:32:19] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:34:56 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:34:57 INFO: 127.0.0.1 - - [06/Jun/2021 11:34:57] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:34:57 INFO: 127.0.0.1 - - [06/Jun/2021 11:34:57] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:34:57 INFO: 127.0.0.1 - - [06/Jun/2021 11:34:57] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:34:57 INFO: 127.0.0.1 - - [06/Jun/2021 11:34:57] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:34:58 INFO: 127.0.0.1 - - [06/Jun/2021 11:34:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:35:25 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:35:26 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:26] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:35:30 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:35:30 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:30] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:35:30 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:30] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:35:31 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:31] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:35:31 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:31] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:35:32 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:35:53 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:35:53 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:53] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:35:53 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:53] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:35:53 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:53] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:35:54 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:54] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:35:55 INFO: 127.0.0.1 - - [06/Jun/2021 11:35:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:36:32 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:36:32 INFO: 127.0.0.1 - - [06/Jun/2021 11:36:32] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:36:32 INFO: 127.0.0.1 - - [06/Jun/2021 11:36:32] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:36:32 INFO: 127.0.0.1 - - [06/Jun/2021 11:36:32] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:36:32 INFO: 127.0.0.1 - - [06/Jun/2021 11:36:32] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:36:34 INFO: 127.0.0.1 - - [06/Jun/2021 11:36:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:37:12 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:37:13 INFO: 127.0.0.1 - - [06/Jun/2021 11:37:13] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:37:13 INFO: 127.0.0.1 - - [06/Jun/2021 11:37:13] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:37:13 INFO: 127.0.0.1 - - [06/Jun/2021 11:37:13] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:37:14 INFO: 127.0.0.1 - - [06/Jun/2021 11:37:14] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:37:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:37:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:38:59 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:38:59 INFO: 127.0.0.1 - - [06/Jun/2021 11:38:59] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:39:00 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:00] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:39:00 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:00] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:39:00 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:00] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:39:02 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:39:04 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:39:05 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:05] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:39:05 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:05] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:39:05 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:05] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:39:05 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:05] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:39:07 INFO: 127.0.0.1 - - [06/Jun/2021 11:39:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:41:14 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:41:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:15] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:41:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:15] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:41:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:15] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:41:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:15] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:41:17 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:41:55 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:41:55 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:55] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:41:55 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:55] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:41:55 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:55] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:41:56 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:56] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:41:57 INFO: 127.0.0.1 - - [06/Jun/2021 11:41:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:42:33 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:42:33 INFO: 127.0.0.1 - - [06/Jun/2021 11:42:33] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:42:34 INFO: 127.0.0.1 - - [06/Jun/2021 11:42:34] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:42:34 INFO: 127.0.0.1 - - [06/Jun/2021 11:42:34] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:42:34 INFO: 127.0.0.1 - - [06/Jun/2021 11:42:34] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:42:36 INFO: 127.0.0.1 - - [06/Jun/2021 11:42:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:47:15 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:47:15 INFO: 127.0.0.1 - - [06/Jun/2021 11:47:15] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:47:16 INFO: 127.0.0.1 - - [06/Jun/2021 11:47:16] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 11:47:16 INFO: 127.0.0.1 - - [06/Jun/2021 11:47:16] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 11:47:16 INFO: 127.0.0.1 - - [06/Jun/2021 11:47:16] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 11:47:17 INFO: 127.0.0.1 - - [06/Jun/2021 11:47:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 11:48:05 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 11:48:05 INFO: 127.0.0.1 - - [06/Jun/2021 11:48:05] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:48:24 INFO: /mx_ca40.html Orden: 'set_master_vol', parámetro: '23', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 11:48:25 INFO: 127.0.0.1 - - [06/Jun/2021 11:48:25] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:48:29 INFO: /mx_ca40.html Orden: 'set_mic_vol', parámetro: '62', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 11:48:30 INFO: 127.0.0.1 - - [06/Jun/2021 11:48:30] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:48:32 INFO: /mx_ca40.html Orden: 'set_line1_vol', parámetro: '63', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 11:48:32 INFO: 127.0.0.1 - - [06/Jun/2021 11:48:32] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:48:36 INFO: /mx_ca40.html Orden: 'set_mute', parámetro: 'ON', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 11:48:36 INFO: 127.0.0.1 - - [06/Jun/2021 11:48:36] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 11:48:38 INFO: /mx_ca40.html Orden: 'set_mute', parámetro: 'OFF', puerto: '/dev/ttyUSB1', id Dispositivo: 2.
+2021/06/06 11:48:38 INFO: 127.0.0.1 - - [06/Jun/2021 11:48:38] "[37mPOST /orden/2 HTTP/1.1[0m" 200 -
+2021/06/06 12:21:16 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:16] "[32mGET /dispositivo/2 HTTP/1.1[0m" 302 -
+2021/06/06 12:21:16 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:16] "[37mGET /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 200 -
+2021/06/06 12:21:16 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:16] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 12:21:16 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:16] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 12:21:16 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:16] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 12:21:17 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 12:21:24 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:24] "[32mPOST /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 302 -
+2021/06/06 12:21:24 INFO: /mx_ca40.html Dispositivo 'Ecler CA-40'  con id = 2.
+2021/06/06 12:21:24 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:24] "[37mGET /dispositivo/2 HTTP/1.1[0m" 200 -
+2021/06/06 12:21:45 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:45] "[32mGET /login?next=%2Fdispositivo%2F2 HTTP/1.1[0m" 302 -
+2021/06/06 12:21:45 INFO: /inicio.html Llamada a página principal
+2021/06/06 12:21:45 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:45] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 12:21:46 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:46] "[37mGET /static/img/mitsubishi_ex320u.jpg HTTP/1.1[0m" 200 -
+2021/06/06 12:21:46 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:46] "[37mGET /static/img/ecler_ca40.jpeg HTTP/1.1[0m" 200 -
+2021/06/06 12:21:46 INFO: 127.0.0.1 - - [06/Jun/2021 12:21:46] "[37mGET /static/img/greeberet.jpg HTTP/1.1[0m" 200 -
+2021/06/06 12:42:29 INFO:  * Detected change in '/home/pi/proyecto/manage.py', reloading
+2021/06/06 12:42:30 INFO:  * Restarting with stat
+2021/06/06 12:42:33 WARNING:  * Debugger is active!
+2021/06/06 12:42:33 INFO:  * Debugger PIN: 575-620-793
+2021/06/06 12:44:58 INFO:  * Detected change in '/home/pi/proyecto/manage.py', reloading
+2021/06/06 12:44:59 INFO:  * Restarting with stat
+2021/06/06 13:14:06 INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021/06/06 13:14:06 INFO:  * Restarting with stat
+2021/06/06 13:14:08 WARNING:  * Debugger is active!
+2021/06/06 13:14:08 INFO:  * Debugger PIN: 575-620-793
+2021/06/06 13:14:10 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:14:10 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:10] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:14:10 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:10] "[33mGET /static/img/ecler_ca40.jpg HTTP/1.1[0m" 404 -
+2021/06/06 13:14:21 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:14:21 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:21] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:14:22 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:22] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2021/06/06 13:14:22 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:22] "[32mGET /static//js/jquery.js HTTP/1.1[0m" 308 -
+2021/06/06 13:14:22 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:22] "[37mGET /static/js/jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 13:14:22 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:22] "[37mGET /static/img/mitsubishi_ex320u.jpg HTTP/1.1[0m" 200 -
+2021/06/06 13:14:22 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:22] "[33mGET /static/img/ecler_ca40.jpg HTTP/1.1[0m" 404 -
+2021/06/06 13:14:23 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021/06/06 13:14:26 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:26] "[37mGET /login HTTP/1.1[0m" 200 -
+2021/06/06 13:14:32 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:32] "[37mPOST /login HTTP/1.1[0m" 200 -
+2021/06/06 13:14:36 INFO: 127.0.0.1 - - [06/Jun/2021 13:14:36] "[37mPOST /login HTTP/1.1[0m" 200 -
+2021/06/06 13:15:12 INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021/06/06 13:15:12 INFO:  * Restarting with stat
+2021/06/06 13:15:14 WARNING:  * Debugger is active!
+2021/06/06 13:15:14 INFO:  * Debugger PIN: 575-620-793
+2021/06/06 13:15:17 INFO: 127.0.0.1 - - [06/Jun/2021 13:15:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021/06/06 13:15:17 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:15:17 INFO: 127.0.0.1 - - [06/Jun/2021 13:15:17] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:15:17 INFO: 127.0.0.1 - - [06/Jun/2021 13:15:17] "[33mGET /static/img/ecler_ca40.jpg HTTP/1.1[0m" 404 -
+2021/06/06 13:15:24 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:15:25 INFO: 127.0.0.1 - - [06/Jun/2021 13:15:25] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:15:25 INFO: 127.0.0.1 - - [06/Jun/2021 13:15:25] "[33mGET /static/img/ecler_ca40.jpg HTTP/1.1[0m" 404 -
+2021/06/06 13:16:10 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:16:10 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:10] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:16:10 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:10] "[37mGET /static/img/ecler_ca40.jpg HTTP/1.1[0m" 200 -
+2021/06/06 13:16:33 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:33] "[37mGET /static/img/loading.gif HTTP/1.1[0m" 200 -
+2021/06/06 13:16:36 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:36] "[35m[1mGET /dispositivo/1 HTTP/1.1[0m" 500 -
+2021/06/06 13:16:37 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:37] "[37mGET /dispositivo/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2021/06/06 13:16:37 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:37] "[37mGET /dispositivo/1?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2021/06/06 13:16:37 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:37] "[37mGET /dispositivo/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2021/06/06 13:16:38 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:38] "[37mGET /dispositivo/1?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2021/06/06 13:16:39 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:39] "[37mGET /dispositivo/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/06 13:16:40 INFO: 127.0.0.1 - - [06/Jun/2021 13:16:40] "[37mGET /dispositivo/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2021/06/06 13:17:21 INFO: /vp_ex320u.html Dispositivo 'Mitsubmshi EX320U'  con id = 1.
+2021/06/06 13:17:21 INFO: 127.0.0.1 - - [06/Jun/2021 13:17:21] "[37mGET /dispositivo/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:17:57 INFO: /vp_ex320u.html Orden: 'set_power', parámetro: 'ON', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:17:57 INFO: 127.0.0.1 - - [06/Jun/2021 13:17:57] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:18:07 INFO: /vp_ex320u.html Dispositivo 'Mitsubmshi EX320U'  con id = 1.
+2021/06/06 13:18:07 INFO: 127.0.0.1 - - [06/Jun/2021 13:18:07] "[37mGET /dispositivo/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:18:39 INFO: /vp_ex320u.html Orden: 'set_source', parámetro: 'S-Video', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:18:39 INFO: 127.0.0.1 - - [06/Jun/2021 13:18:39] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:18:49 INFO: /vp_ex320u.html Orden: 'set_source', parámetro: 'HDMI', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:18:49 INFO: 127.0.0.1 - - [06/Jun/2021 13:18:49] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:19:00 INFO: /vp_ex320u.html Orden: 'set_brightness', parámetro: '27', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:19:00 INFO: 127.0.0.1 - - [06/Jun/2021 13:19:00] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:19:10 INFO: /vp_ex320u.html Orden: 'set_contrast', parámetro: '-14', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:19:10 INFO: 127.0.0.1 - - [06/Jun/2021 13:19:10] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:19:20 INFO: /vp_ex320u.html Orden: 'set_contrast', parámetro: '-26', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:19:20 INFO: 127.0.0.1 - - [06/Jun/2021 13:19:20] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:19:30 INFO: /vp_ex320u.html Orden: 'set_contrast', parámetro: '-26', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:19:30 INFO: 127.0.0.1 - - [06/Jun/2021 13:19:30] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:19:41 INFO: /vp_ex320u.html Orden: 'set_picturesetting', parámetro: 'User1', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:19:41 INFO: 127.0.0.1 - - [06/Jun/2021 13:19:41] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:19:51 INFO: /vp_ex320u.html Orden: 'set_contrast', parámetro: '-32', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:19:51 INFO: 127.0.0.1 - - [06/Jun/2021 13:19:51] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:02 INFO: /vp_ex320u.html Orden: 'set_brightness', parámetro: '0', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:20:02 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:02] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:12 INFO: /vp_ex320u.html Orden: 'set_brightness', parámetro: '45', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:20:12 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:12] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:22 INFO: /vp_ex320u.html Orden: 'set_brightness', parámetro: '100', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:20:22 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:22] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:33 INFO: /vp_ex320u.html Orden: 'set_contrast', parámetro: '37', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:20:33 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:33] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:43 INFO: /vp_ex320u.html Orden: 'set_contrast', parámetro: '37', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:20:43 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:43] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:53 INFO: /vp_ex320u.html Orden: 'set_brightness', parámetro: '100', puerto: '/dev/ttyUSB0', id Dispositivo: 1.
+2021/06/06 13:20:53 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:53] "[37mPOST /orden/1 HTTP/1.1[0m" 200 -
+2021/06/06 13:20:53 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:53] "[37mGET /dispositivo/2/edit HTTP/1.1[0m" 200 -
+2021/06/06 13:20:53 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:53] "[37mGET /dispositivo/1/edit HTTP/1.1[0m" 200 -
+2021/06/06 13:20:53 INFO: 127.0.0.1 - - [06/Jun/2021 13:20:53] "[37mGET /dispositivo/2/edit HTTP/1.1[0m" 200 -
+2021/06/06 13:21:06 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:21:06 INFO: 127.0.0.1 - - [06/Jun/2021 13:21:06] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:21:09 INFO: 127.0.0.1 - - [06/Jun/2021 13:21:09] "[37mGET /dispositivo/new HTTP/1.1[0m" 200 -
+2021/06/06 13:22:04 INFO: /vp_ex320u.html Puerto: '/dev/ttyUSB0', imagen: 'greeberet.jpg', archivoPY: 'vp_ex320u.py'.
+2021/06/06 13:22:04 INFO: 127.0.0.1 - - [06/Jun/2021 13:22:04] "[32mPOST /dispositivo/new HTTP/1.1[0m" 302 -
+2021/06/06 13:22:04 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:22:04 INFO: 127.0.0.1 - - [06/Jun/2021 13:22:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:22:05 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/vp_ex320u.py', reloading
+2021/06/06 13:22:06 INFO:  * Restarting with stat
+2021/06/06 13:22:10 WARNING:  * Debugger is active!
+2021/06/06 13:22:10 INFO:  * Debugger PIN: 575-620-793
+2021/06/06 13:22:24 INFO: /vp_ex320u.html Dispositivo 'prueba'  con id = 3.
+2021/06/06 13:22:24 INFO: 127.0.0.1 - - [06/Jun/2021 13:22:24] "[37mGET /dispositivo/3 HTTP/1.1[0m" 200 -
+2021/06/06 13:22:40 INFO: /vp_ex320u.html Orden: 'set_power', parámetro: 'OFF', puerto: '/dev/ttyUSB0', id Dispositivo: 3.
+2021/06/06 13:22:40 INFO: 127.0.0.1 - - [06/Jun/2021 13:22:40] "[37mPOST /orden/3 HTTP/1.1[0m" 200 -
+2021/06/06 13:22:40 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:22:41 INFO: 127.0.0.1 - - [06/Jun/2021 13:22:41] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:22:46 INFO: 127.0.0.1 - - [06/Jun/2021 13:22:46] "[37mGET /descargar_log HTTP/1.1[0m" 200 -
+2021/06/06 13:24:53 INFO: 127.0.0.1 - - [06/Jun/2021 13:24:53] "[37mGET /dispositivo/1/edit HTTP/1.1[0m" 200 -
+2021/06/06 13:25:00 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:25:00 INFO: 127.0.0.1 - - [06/Jun/2021 13:25:00] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 13:25:06 INFO: 127.0.0.1 - - [06/Jun/2021 13:25:06] "[37mGET /dispositivo/3/delete HTTP/1.1[0m" 200 -
+2021/06/06 13:25:11 INFO: /dispositivo_delete.html Dispositivo 'prueba' con id = '3' en puerto: '/dev/ttyUSB0' borrado.
+2021/06/06 13:25:11 INFO: 127.0.0.1 - - [06/Jun/2021 13:25:11] "[32mPOST /dispositivo/3/delete HTTP/1.1[0m" 302 -
+2021/06/06 13:25:11 INFO: /inicio.html Llamada a página principal
+2021/06/06 13:25:11 INFO: 127.0.0.1 - - [06/Jun/2021 13:25:11] "[37mGET / HTTP/1.1[0m" 200 -
+2021/06/06 18:35:33 INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021/06/06 18:35:33 INFO:  * Restarting with stat
+2021/06/06 18:35:35 WARNING:  * Debugger is active!
+2021/06/06 18:35:35 INFO:  * Debugger PIN: 575-620-793
+2021/06/06 19:54:09 INFO:  * Detected change in '/home/pi/proyecto/aplicacion/app.py', reloading
+2021/06/06 19:54:10 INFO:  * Restarting with stat
+2021/06/06 20:37:44 INFO:  * Restarting with stat
+2021/06/06 20:40:56 INFO:  * Restarting with stat
+2021/06/06 20:50:58 INFO:  * Restarting with stat
+2021/06/06 20:59:35 INFO:  * Restarting with stat

@@ -1,0 +1,59 @@
+{% extends "bootstrap/base.html" %}
+{% block navbar %}
+<link rel="stylesheet" href="/static/css/style.css">
+<script type=text/javascript src="{{url_for('static', filename='/js/jquery.js')}}"></script>
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Inicio</a>
+          <a class="navbar-brand" href="{{url_for('categorias')}}">Categorias</a>
+           
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          
+          {% if current_user.is_authenticated %}
+          <a class="navbar-brand " href="/perfil/{{ current_user.username}}"> Perfil</a>
+          <a class="navbar-brand " href="/logout"> {{ current_user.username}} (Salir)</a>
+          {% else %}
+          <a class="navbar-brand " href="/login">Login</a>
+          <a class="navbar-brand " href="/registro">Registro</a>
+          {% endif %}
+        </div>    
+      </div>
+    </nav>
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Aula 00</h2>
+        <h4>Control y gestión de los medios audiovisuales</h4>
+        {% block device %}{% endblock %}      
+        
+      </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="container">
+        {% block contenido %}{% endblock %}
+    </div>
+  
+</div>
+    
+    
+{% endblock %}

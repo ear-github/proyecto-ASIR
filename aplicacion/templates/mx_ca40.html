@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+{% block title %}{{device_name}}{% endblock %}
+{% block contenido %}
+
+  <h2>Mezclador: {{device_name}}</h2><span id="device-id" hidden>{{device_id}}</span>
+  <p class="text-secondary">Puerto: {{port}}</p><br>
+  <div>
+    <div>
+      <label for="mute_status">Mute: </label>
+      <span id="mute_status">{{mute_status}}</span>
+      <form id="mute_form" method="POST" class="form-group">
+        <input type="radio" id ='on' name="parameter" value="ON">ON  
+        <input type="radio" id ='off' name="parameter" value="OFF">OFF
+        <input type="hidden" name="command" value="set_mute">
+        <input type="button" id="mute" class="command command-mute" value="Establecer" class="btn">
+      </form>
+    </div>
+  <!--   <p>Mute: <span id="mute_status">{{mute_status}}</span><span id="device-id" hidden>{{device_id}}</span>
+    <button id="mute_on_button" class="command command-mute_on" value="mute_on"> MUTE ON </button>
+    <button id="mute_off_button" class="command command-mute_off" value="mute_off"> MUTE OFF </button> -->
+
+    <h3>Volumen:</h3>
+    <div class="ui-content">
+      <form id="master_form" method = "POST" class="command-form">
+        <label for="master_status">Master: </label><input type="text" class="valuebox" id="master-value" value="{{master_status}}" readonly>
+        <div class="volume-range">
+          <input type='range' id='master_status' name='parameter' min="0" max="64" value="{{master_status}}" onchange="updateMasterValue(this.value);">
+        </div>
+        <input type="hidden" name="command" value="set_master_vol">
+        <input type="button" id = "master" value="Ajustar" class = "command-button">
+      </form>
+    </div>
+    <div><br>
+      <form id="mic_form" method = "POST" class="command-form">
+        <label for="mic_status">Micrófono: </label><input type="text" class="valuebox" id="mic-value" value="{{mic_status}}" readonly>
+        <div class="volume-range">
+          <input type='range' id='mic_status' name='parameter' min="0" max="64" value="{{mic_status}}" onchange="updateMicValue(this.value);"/>
+        </div> 
+        <input type="hidden" name="command" value="set_mic_vol">
+        <input type="button" id = "mic" value="Ajustar" class = "command-button">
+      </form>
+    </div>
+    <div><br>
+      <form id="line1_form" method = "POST" class = "command-form">
+        <label for="line1_status">Línea 1: </label><input type="text" class="valuebox" id="line1-value" value="{{line1_status}}" readonly>
+        <div class="volume-range">
+          <input type='range' id='line1_status' name='parameter' min="0" max="64" value= "{{line1_status}}" onchange="updateLine1Value(this.value);"/>
+        </div>
+        <input type="hidden" name="command" value="set_line1_vol">
+        <input type="button" id="line1" value="Ajustar" class="command-button">
+      </form>
+    </div>
+  </div>
+
+<!--   <div>
+    <form id="port_form">
+      <label for="portname">Puerto asignado:</label>
+      <input type="text" id="portname" name="port_name" value="{{port}}">
+      <input type="button" id="port" value="Asignar puerto">
+    </form>
+  </div>
+ -->
+
+
+<!--------------------------- SCRIPTS ---------------------------------------------------------->
+
+<script> 
+function updateMasterValue(val) {
+          document.getElementById('master-value').value=val; 
+        }
+function updateMicValue(val) {
+          document.getElementById('mic-value').value=val; 
+        }
+function updateLine1Value(val) {
+          document.getElementById('line1-value').value=val; 
+        }
+
+
+// Comprueba los valores del dispositivo y los actualiza en pantalla
+  function check_mixer_status(){
+    $.ajax({ 
+    url: '/mezclador/status',
+    success: function(data){
+      jsonpower = JSON.stringify(data.power_status, null, '');
+      jsonpower = jsonpower.replace(/"/g, "");
+      $('#get_power_status').html(jsonpower);
+      $('#get_source').html(JSON.stringify(data.source, null, ''));
+      $('#get_picturesetting').html(JSON.stringify(data.picturesetting, null, ''));
+      $('#get_aspect').html(JSON.stringify(data.aspect, null, ''));
+      $('#get_lamphours').html(JSON.stringify(data.lamp_hours, null, ''));
+      $('#get_lampminutes').html(JSON.stringify(data.lamp_minutes, null, ''));
+      $('#get_lampmode').html(JSON.stringify(data.lampmode, null, ''));
+      }
+    });
+  }
+
+  function projector_command(cmd){ // envía el comando y actualiza los valores
+    $.ajax({
+      url: '/proyector/' + cmd,
+      success: check_projector_status()
+    })
+  }
+
+  var id_dispositivo = $("#device-id").text()
+  // Cuando se ha renderizado la plantilla se ha pasado en una etiqueta oculta el id del dispositivo
+  // con la intención de utilizarlo cuando el comando se envíe al servidor y este sepa a qué dispositivo corresponde
+  // Almacenamos el valor en id_dispositivo
+
+  $(document).ready(function(){
+    $("#mute").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#mute_form')[0])
+      $.ajax({
+        url: '/orden/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#mute_status').html(JSON.stringify(data.mute_status, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+
+    $("#master").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#master_form')[0])
+      $.ajax({
+        url: '/orden/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#master_status').html(JSON.stringify(data.master_status, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+
+    $("#mic").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#mic_form')[0])
+      $.ajax({
+        url: '/orden/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#mic_status').html(JSON.stringify(data.mic_status, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+
+    $("#line1").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#line1_form')[0])
+      $.ajax({
+        url: '/orden/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#line1_status').html(JSON.stringify(data.line1_status, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+
+    $("#port").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#port_form')[0])
+      $.ajax({
+        url: '/puerto/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#line1_status').html(JSON.stringify(data.port, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+  });
+
+</script>
+
+
+
+
+{% endblock %}
