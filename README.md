@@ -1,6 +1,7 @@
 # proyecto-ASIR
 # Gestión y control de medios audiovisuales en un aula de docencia. 
   Proyecto integrado para el curso 2020-2021 del ciclo Administración de Sistemas Informáticos en Red (ASIR) en el IES Francisco Romero Vargas. El objetivo básico de este proyecto consiste en la automatización del equipamiento audiovisual de un aula de docencia, de manera que ofrezca al profesor la mayor sencillez posible en el manejo de los equipos, así como que permita al administrador de los medios la consulta, supervisión y control de estos tanto en el sitio como de forma remota.
+  
 # Finalidad
 
   Es un hecho que hoy en día cualquier aula dedicada a la enseñanza suele contar con medios tecnológicos de apoyo, como la proyección de vídeo o la megafonía, que ayudan a los docentes en la impartición de sus clases. Estos medios requieren como es lógico de una puesta en marcha diaria y de un manejo para que se adecúen a las necesidades del profesor o la profesora en cada momento (encender los equipos, ajustar el micrófono, …). 
@@ -17,20 +18,15 @@
   La idea se centra en el PC miniaturizado Raspberry Pi, que hará de controlador del sistema. A este conectaremos por USB los siguientes elementos:
   
   •	Teclado personalizado de 10 botones desde el que se ejecutarán las órdenes básicas del equipamiento audiovisual.
-    - Encendido y apagado general.
-    
-    - Activación y desactivación del videoproyector.
-    
-    - Subida y bajada del volumen del micrófono del docente.
-    
+    - Encendido y apagado general.    
+    - Activación y desactivación del videoproyector.    
+    - Subida y bajada del volumen del micrófono del docente.    
     - Subida y bajada del volumen los altavoces de la sala.
     
     
   •	Interfaces USB-RS232 para controlar:
-    - Videoproyector.
-    
-    - Amplificador-mezclador de audio.
-    
+    - Videoproyector.    
+    - Amplificador-mezclador de audio.    
     - (Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
     
 
