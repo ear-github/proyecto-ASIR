@@ -18,21 +18,21 @@
   
   •	Teclado personalizado de 10 botones desde el que se ejecutarán las órdenes básicas del equipamiento audiovisual.
   
-    o	Encendido y apagado general.
+    •	Encendido y apagado general.
     
-    o	Activación y desactivación del videoproyector.
+    •	Activación y desactivación del videoproyector.
     
-    o	Subida y bajada del volumen del micrófono del docente.
+    •	Subida y bajada del volumen del micrófono del docente.
     
-    o	Subida y bajada de los altavoces de la sala.
+    •	Subida y bajada de los altavoces de la sala.
     
   •	Interfaces USB-RS232 para controlar:
   
-    o	Videoproyector
+    •	Videoproyector
     
-    o	Amplificador-mezclador de audio
+    •	Amplificador-mezclador de audio
     
-    o	(Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
+    •	(Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
     
 
   Una pantalla de proyección común incorpora su propio panel de botones que accionan los relés de movimiento de subida y bajada. Para controlarlo conectaremos el puerto GPIO de la Raspberry a este panel mediante un optoacoplador (con el que aislamos nuestra Raspberry del circuito del motor la pantalla).
