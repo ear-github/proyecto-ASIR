@@ -28,7 +28,8 @@
    - Videoproyector.    
    - Amplificador-mezclador de audio.    
    - (Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
-    
+    ![image](https://user-images.githubusercontent.com/55459327/121046195-39a4a980-c7b6-11eb-9d2d-30a4680147f2.png)
+
 
   Una pantalla de proyección común incorpora su propio panel de botones que accionan los relés de movimiento de subida y bajada. Para controlarlo conectaremos el puerto GPIO de la Raspberry a este panel mediante un optoacoplador (con el que aislamos nuestra Raspberry del circuito del motor la pantalla).
 Mediante software se pretende programar la Raspberry para que, en función del botón pulsado, se comunique por puerto serie con los equipos que sea necesario. Por ejemplo, el botón de puesta en marcha realizaría lo siguiente:
