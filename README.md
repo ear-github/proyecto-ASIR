@@ -18,16 +18,16 @@
   La idea se centra en el PC miniaturizado Raspberry Pi, que hará de controlador del sistema. A este conectaremos por USB los siguientes elementos:
   
   •	Teclado personalizado de 10 botones desde el que se ejecutarán las órdenes básicas del equipamiento audiovisual.
-    - Encendido y apagado general.    
-    - Activación y desactivación del videoproyector.    
-    - Subida y bajada del volumen del micrófono del docente.    
-    - Subida y bajada del volumen los altavoces de la sala.
+   - Encendido y apagado general.    
+   - Activación y desactivación del videoproyector.    
+   - Subida y bajada del volumen del micrófono del docente.    
+   - Subida y bajada del volumen los altavoces de la sala.
     
     
   •	Interfaces USB-RS232 para controlar:
-    - Videoproyector.    
-    - Amplificador-mezclador de audio.    
-    - (Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
+   - Videoproyector.    
+   - Amplificador-mezclador de audio.    
+   - (Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
     
 
   Una pantalla de proyección común incorpora su propio panel de botones que accionan los relés de movimiento de subida y bajada. Para controlarlo conectaremos el puerto GPIO de la Raspberry a este panel mediante un optoacoplador (con el que aislamos nuestra Raspberry del circuito del motor la pantalla).
