@@ -18,13 +18,19 @@
   
   •	Teclado personalizado de 10 botones desde el que se ejecutarán las órdenes básicas del equipamiento audiovisual.
     - Encendido y apagado general.
+    
     - Activación y desactivación del videoproyector.
+    
     - Subida y bajada del volumen del micrófono del docente.
+    
     - Subida y bajada del volumen los altavoces de la sala.
     
+    
   •	Interfaces USB-RS232 para controlar:
-    - Videoproyector
-    - Amplificador-mezclador de audio
+    - Videoproyector.
+    
+    - Amplificador-mezclador de audio.
+    
     - (Opcional) Conmutador de vídeo HDMI. Este recibe a su entrada tanto la señal de vídeo del PC de escritorio como la de un portátil que conectemos si es necesario. Sus salidas irán hacia el monitor de la mesa del docente y hacia el videoproyector.
     
 
