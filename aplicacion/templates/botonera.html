@@ -6,8 +6,21 @@ Medios Audiovisuales
 <div class="container">
   <div class="row">
     <div class="col-md-2">
+      <h3>Dispositivos</h3>  
+      <div class="list-group">      
+        {% for cat in categorias %}
+        {% if categoria.nombre==cat.nombre%}
+        <a class="list-group-item active" href="{{url_for('inicio',id=cat.id)}}">{{cat.nombre}}</a>
+        {% else %}
+        <a class="list-group-item" href="{{url_for('inicio',id=cat.id)}}">{{cat.nombre}}</a>
+        {% endif%}
+        {% endfor %}
+        
+      </div>
       <br/>
       {% if current_user.is_authenticated and current_user.is_admin()  %}
+      <a class="btn btn-primary" href="{{url_for('botonera')}}" role="button">Botonera</a>
+      <br><br>
       <a class="btn btn-primary" href="{{url_for('dispositivo_new')}}" role="button">Nuevo dispositivo</a>
       <br><br>
       <p>Descargar logs:</p>
@@ -19,34 +32,63 @@ Medios Audiovisuales
     <div class="col-md-10">
       <div id="loading" class="d-flex p-2"><br>  Cargando dispositivo...
       </div>
+      <h3>Botonera de control</h3>
       <div class="panel panel-default">
-      <h2>Botón 1</h2>
-      <div class="form-group">
-          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
-      </div>
-      <div class="form-group">
-          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
-      </div>
-      <div class="form-group">
-          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
-      </div>
-      <div class="form-group">
-          {{form.CategoriaId.label() }}{{form.CategoriaId(class="form-control")}}<br/>
-      </div>
-
-
-
-      </div>
+        <table class="table table-bordered" border="hidden">
+          
+          <tr>
+            {% for b in range(1,6) %}
+            <td width="150">
+              <form id="form-boton-{{b}}" method="POST" class="form-group">
+                <input type="hidden" name="boton" value="{{b}}">
+                <input type="button" id="boton-{{b}}" class="command command-power_on" value="{{nombres_botones[b]}}" class="btn" style='width:200px;'>
+              </form>
+            </td>
+            {% endfor %}
+          </tr>
+          
+          
+          <tr>
+            {% for b in [6,7,8,9,0] %}
+            <td width="150">
+            <form id="form-boton-{{b}}" method="POST" class="form-group">
+              <input type="hidden" name="boton" value="{{b}}">
+              <input type="button" id="boton-{{b}}" class="command command-power_on" value="{{nombres_botones[b]}}" class="btn" style='width:200px;'>
+            </form>
+            </td>
+            {% endfor %}
+          </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
     
     <script type="text/javascript">
       $(document).ready(function(){
-        $(".load-device").click(function(e){
-          $("#loading").show();
-        })
+        {% for b in range(10) %}
+        $("#boton-{{b}}").click(function(e){
+          e.preventDefault();
+          const data = new FormData($('#form-boton-{{b}}')[0])
+          $.ajax({
+            url: '/pulsar_boton/',
+            type: 'POST',
+            data: data,
+            processData: false,
+            contentType: false,
+            success: function(data){
+              console.log("Acciones de botón enviadas")},
+            error: function(error){
+              console.log("Error");
+            } 
+          });
+          return false;
+          alert("form enviado");
+        });
+
+        {% endfor %}
       });
     </script>
 
     {% endblock %}
+    

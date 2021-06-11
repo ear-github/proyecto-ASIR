@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}
+Medios Audiovisuales
+{% endblock %}
+{% block contenido %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Dispositivos</h3>  
+      <div class="list-group">      
+        {% for cat in categorias %}
+        {% if categoria.nombre==cat.nombre%}
+        <a class="list-group-item active" href="{{url_for('inicio',id=cat.id)}}">{{cat.nombre}}</a>
+        {% else %}
+        <a class="list-group-item" href="{{url_for('inicio',id=cat.id)}}">{{cat.nombre}}</a>
+        {% endif%}
+        {% endfor %}
+        
+      </div>
+      <br/>
+      {% if current_user.is_authenticated and current_user.is_admin()  %}
+      <h4>Botonera</h4>
+      <a class="btn btn-primary" href="{{url_for('accion_boton_new')}}" role="button">Nueva acción de botón</a>
+      <br><br>
+      <h4>Parámetros</h4>
+      <a class="btn btn-primary" href="{{url_for('parametros')}}" role="button">Parámetros</a>
+      <br><br>
+      <a class="btn btn-primary" href="{{url_for('parametros_new')}}" role="button">Nuevo parámetro</a>
+      <br><br>
+      <h4>Comandos</h4>
+      <a class="btn btn-primary" href="{{url_for('comandos')}}" role="button">Comandos</a>
+      <br><br>
+      <a class="btn btn-primary" href="{{url_for('comandos_new')}}" role="button">Nuevo comando</a>
+      <br><br>
+      <h4>Descargar logs</h4>
+      <a class="btn btn-primary" href="{{url_for('descargar_log_web')}}" role="button">Log web</a><br><br>
+      <a class="btn btn-primary" href="{{url_for('descargar_log_botonera')}}" role="button">Log botonera</a> 
+      {% endif %}
+      <br/>
+    </div>
+    <div class="col-md-10">
+      <div id="loading" class="d-flex p-2"><br>  Cargando dispositivo...
+      </div>
+      <h3>Listado de parámetros</h3>
+      <div class="panel panel-default">
+        <table class="table table-bordered">
+          <tr>
+            <th>Id</th>
+            <th>Descripción </th>
+            <th>Valor</th>
+            <th>Id comando</th>
+            <th>Código comando</th>
+            <th>Desc. comando</th>
+            {% if current_user.is_authenticated and current_user.is_admin()  %}
+            <th>Modificar</th>
+            <th>Borrar</th>
+            {% endif %}   
+            {% if current_user.is_authenticated %}
+            {% endif %}
+          </tr>
+          {% for p in parametros %}
+
+          <tr>
+            <td>{{p.id}}</td>
+            <td>{{p.descripcion}}</td>
+            <td>{{p.valor}}</td>
+            <td>{{p.ComandoId}}</td>
+            <td>{{listacomandos[p.ComandoId]["codigo"]}}</td>
+            <td>{{listacomandos[p.ComandoId]["descripcion"]}}</td>
+            {% if current_user.is_authenticated and current_user.is_admin()  %}
+            <td><a href="{{url_for('parametros_edit',id=p.id)}}"><span class="glyphicon glyphicon-wrench"></span> Modificar</a></td>
+            <td><a href="{{url_for('parametros_delete',id=p.id)}}"><span class="glyphicon glyphicon-trash"></span> Borrar</a></td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".load-device").click(function(e){
+          $("#loading").show();
+        })
+      });
+    </script>
+
+    {% endblock %}

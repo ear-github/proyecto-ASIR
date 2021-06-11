@@ -25,13 +25,14 @@ class device(Serial):
 
 
 	def __init__(self,ex320_port):
-		super().__init__(ex320_port, timeout = 1)
+		super().__init__(ex320_port, timeout = 0.5)
 		# Serial(ex320_port, timeout = 1)
 
 	# def class_name(self):
 	# 	return self.__class__.__name__
 
 ############################## CONSULTAS ############################################
+
 
 	def get_power(self):
 		self.flush()
@@ -67,8 +68,10 @@ class device(Serial):
 		lee = self.readline()
 		vol = str(lee).split("00VL")[1].rstrip("\\r'")
 		if vol == ":N":
+			self.status_dic["volume"] = 0
 			return "0"
 		else:
+			self.status_dic["volume"] = vol
 			return str(int(vol))
 
 	def get_lamptime(self):
@@ -338,23 +341,24 @@ class device(Serial):
 	def set_volume(self,up_down):
 		self.flush()
 		if up_down == "up":
-			self.write(b'00r06\r')
-			lee = self.readline()
-			vol = str(lee).split("00r06")[1].rstrip("\\r'")
+			try:
+				self.write(b'00r06\r')
+				vol = self.get_volume()
+				if vol < 10:
+					vol+=1
+				self.status_dic["volume"] = vol
+				return True
+			except:
+				return False
+		elif up_down == "down":
+			try:
+				self.write(b'00r07\r')
+				vol = self.get_volume()
+				if vol > 0:
+					vol-=1
+				self.status_dic["volume"] = vol
+				return True
+			except:
+				return False
 		else:
-			self.write(b'00r07\r')
-			lee = self.readline()
-			vol = str(lee).split("00r07")[1].rstrip("\\r'")
-		
-		
-		# if vol == ":N":
-		# 	output = "0"
-		# else:
-		# 	output = str(int(vol))
-		self.status_dic['volume'] = vol
-		return vol
-
-	# def set_vol_down():
-	# 	self.flush()
-	# 	self.write(b'00r07\r')
-	# 	return self.get_volume()
+			return False

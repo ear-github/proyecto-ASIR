@@ -6,7 +6,7 @@ Medios Audiovisuales
 <div class="container">
   <div class="row">
     <div class="col-md-2">
-      <h3>Categorias</h3>  
+      <h3>Dispositivos</h3>  
       <div class="list-group">      
         {% for cat in categorias %}
         {% if categoria.nombre==cat.nombre%}
@@ -19,6 +19,8 @@ Medios Audiovisuales
       </div>
       <br/>
       {% if current_user.is_authenticated and current_user.is_admin()  %}
+      <a class="btn btn-primary" href="{{url_for('botonera')}}" role="button">Botonera</a>
+      <br><br>
       <a class="btn btn-primary" href="{{url_for('dispositivo_new')}}" role="button">Nuevo dispositivo</a>
       <br><br>
       <p>Descargar logs:</p>
@@ -53,9 +55,9 @@ Medios Audiovisuales
           <tr>
             {% if disp.imagen %}
             <td><a href="{{url_for('dispositivo',id=disp.id)}}" class="load-device"><img src="{{url_for('static',filename='img/')}}{{disp.imagen}}"/ width="120"></a>
-              {% else %}
+            {% else %}
               <td><a href="{{url_for('dispositivo',id=disp.id)}}" class="load-device"><img src="{{url_for('static',filename='img/not-found.png')}}" width="120" /></a>
-                {% endif %}
+            {% endif %}
                 <td>{{disp.id}}</td>
                 <td>{{disp.nombre}}</td>
                 <td>{{disp.categoria.nombre}}</td>

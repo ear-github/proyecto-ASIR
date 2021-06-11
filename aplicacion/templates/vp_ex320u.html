@@ -122,29 +122,29 @@
 <!-- Aquí van los scripts -->
 
 <script> // Comprueba los valores del dispositivo y los actualiza en pantalla
-  function check_projector_status(){
-    $.ajax({ 
-    url: '/proyector/status',
-    success: function(data){
-      jsonpower = JSON.stringify(data.power_status, null, '');
-      jsonpower = jsonpower.replace(/"/g, "");
-      $('#get_power_status').html(jsonpower);
-      $('#get_source').html(JSON.stringify(data.source, null, ''));
-      $('#get_picturesetting').html(JSON.stringify(data.picturesetting, null, ''));
-      $('#get_aspect').html(JSON.stringify(data.aspect, null, ''));
-      $('#get_lamphours').html(JSON.stringify(data.lamp_hours, null, ''));
-      $('#get_lampminutes').html(JSON.stringify(data.lamp_minutes, null, ''));
-      $('#get_lampmode').html(JSON.stringify(data.lampmode, null, ''));
-      }
-    });
-  }
+  // function check_projector_status(){
+  //   $.ajax({ 
+  //   url: '/proyector/status',
+  //   success: function(data){
+  //     jsonpower = JSON.stringify(data.power_status, null, '');
+  //     jsonpower = jsonpower.replace(/"/g, "");
+  //     $('#get_power_status').html(jsonpower);
+  //     $('#get_source').html(JSON.stringify(data.source, null, ''));
+  //     $('#get_picturesetting').html(JSON.stringify(data.picturesetting, null, ''));
+  //     $('#get_aspect').html(JSON.stringify(data.aspect, null, ''));
+  //     $('#get_lamphours').html(JSON.stringify(data.lamp_hours, null, ''));
+  //     $('#get_lampminutes').html(JSON.stringify(data.lamp_minutes, null, ''));
+  //     $('#get_lampmode').html(JSON.stringify(data.lampmode, null, ''));
+  //     }
+  //   });
+  // }
 
-  function projector_command(cmd){ // envía el comando y actualiza los valores
-    $.ajax({
-      url: '/proyector/' + cmd,
-      success: check_projector_status()
-    })
-  }
+  // function projector_command(cmd){ // envía el comando y actualiza los valores
+  //   $.ajax({
+  //     url: '/proyector/' + cmd,
+  //     success: check_projector_status()
+  //   })
+  // }
 
   var id_dispositivo = $("#device-id").text()
   // Cuando se ha renderizado la plantilla se ha pasado en una etiqueta oculta el id del dispositivo

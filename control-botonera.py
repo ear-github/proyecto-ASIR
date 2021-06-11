@@ -3,13 +3,14 @@ import sqlite3, readchar, importlib, logging, re
 
 #Añadimos una ruta que apunta a donde tenemos guardados los módulos de nuestros dispositivos
 import sys
+sys.path.insert(1, '/home/pi/proyecto/')
 sys.path.insert(1, '/home/pi/proyecto/aplicacion')
 
 # Uso de un log de operaciones en archivo
 logging.basicConfig(filename = "registro_botonera.log", level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s', datefmt='%Y/%m/%d %H:%M:%S')
 
 #Realizamos la conexión SQL
-conexion = sqlite3.connect('dbase.db')
+conexion = sqlite3.connect('/home/pi/proyecto/dbase.db')
 
 #Creamos un cursor que tiene la última orden a la base de datos
 cur = conexion.cursor()
@@ -41,13 +42,17 @@ while opcion != "x":
 	if re.match(regex, opcion):
 		i = int(opcion)
 		lista_comandos = lista_botones[i]
-		try:
-			for c in lista_comandos:
-				nombre_modulo = c["modulo"].rstrip(".py")
-				modulo = importlib.import_module(nombre_modulo)
-				dispositivo = modulo.device(c["puerto"])
-				eval("dispositivo." + c["orden"])
-				print(c["puerto"] + ", " + c["modulo"] + ", " + c["orden"] + ", " + c["descripcion"])
-				logging.info("Puerto: '%s', dispositivo: '%s', comando: '%s', descripción: '%s'", c["puerto"], c["modulo"], c["orden"], c["descripcion"])
-		except:
-			print("Botón no asignado")
+		# try:
+		for c in lista_comandos:
+			nombre_modulo = c["modulo"].rstrip(".py")
+			print("nombre módulo")
+			modulo = importlib.import_module(nombre_modulo)
+			print("módulo importado")
+			dispositivo = modulo.device(c["puerto"])
+			print("dispositivo iniciado")
+			eval("dispositivo." + c["orden"])
+			print("orden lanzada")
+			print(c["puerto"] + ", " + c["modulo"] + ", " + c["orden"] + ", " + c["descripcion"])
+			logging.info("Puerto: '%s', dispositivo: '%s', comando: '%s', descripción: '%s'", c["puerto"], c["modulo"], c["orden"], c["descripcion"])
+		# except:
+		# 	print("Botón no asignado")
