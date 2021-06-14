@@ -1,29 +1,47 @@
 {% extends "base.html" %}
 {% block title %}Medios Audiovisuales{% endblock %}
 {% block contenido %}
-<div class="container">
-  <div class="col-md-2"></div>
-  <div class="col-md-6">
-    <h3>Crear nuevo parámetro asignado a un comando</h3>  
-    {% for field, errors in form.errors.items() %}
-      <div class="alert alert-danger">
-        {{ form[field].label }}: {{ ', '.join(errors) }}
+<div class="col-md-10">
+  <div class="panel-primary">  
+    <div class="panel-heading">Crear nuevo parámetro asignado a un comando
+    </div>
+    <div class="panel-body">  
+        {% for field, errors in form.errors.items() %}
+        <div class="alert alert-danger">
+          {{ form[field].label }}: {{ ', '.join(errors) }}
+        </div>
+        {% endfor %}
+          <form class="form-horizontal" method="post" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+
+
+            <div class="form-group row">
+              {{form.valor.label(class="col-sm-12 col-form-label") }}
+              <div class="col-md-6">
+                {{form.valor(size="1",class="form-control")}}
+              </div>
+            </div>
+
+            <div class="form-group row">
+              {{form.ComandoId.label(class="col-sm-12 col-form-label") }}
+              <div class="col-md-8">
+                {{form.ComandoId(class="form-control")}}
+              </div>
+            </div>
+
+            <div class="form-group row">
+              {{form.descripcion.label(class="col-sm-12 col-form-label") }}
+              <div class="col-md-10">
+                {{form.descripcion(size="100",class="form-control")}}
+              </div>
+            </div>
+
+            <div clas="col-md-10">
+              {{form.submit(class="btn btn-lg btn-primary")}}
+            </div>
+        </form>
+        <br>
       </div>
-    {% endfor %}
-      <form class="form-horizontal" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-          {{ form.csrf_token }}
-          {{form.descripcion.label() }}{{form.descripcion(size="100",class="form-control")}}<br/>
-        </div>
-        <div class="form-group">
-          {{form.valor.label() }}{{form.valor(size="1",class="form-control")}}<br/>
-        </div>
-        <div class="form-group">
-          {{form.ComandoId.label() }}{{form.ComandoId(class="form-control")}}<br/>
-        </div>
-          {{form.submit(class="btn btn-lg btn-primary btn-block")}}
-    </form>
-    <br/>
   </div>
 </div>  
 {% endblock %}

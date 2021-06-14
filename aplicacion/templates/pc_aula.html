@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}{{device_name}}{% endblock %}
+{% block contenido %}
+<div class="col-md-10">
+  <div class="panel-primary">
+    <div class="panel-heading">{{device_name}}</div><span id="device-id" hidden>{{device_id}}</span>
+      <div class="panel-body">
+        <p class="text-secondary">Puerto: {{port}}</p>
+        <p class="text-secondary">Dirección IP: {{ip}}</p>
+        <p class="text-secondary">Dirección MAC: {{mac}}</p>
+        <hr>
+        <div>
+          <div>
+            <label for="pc_status">Encendido: </label>
+            <span id="pc_status">{{pc_status}}</span>
+            <form id="pc_form" method="POST" class="form-group">
+              <input type="radio" id ='on' name="parameter" value="on">ON
+              <input type="radio" id ='off' name="parameter" value="off">OFF
+              <input type="hidden" name="command" value="set_power">
+              <input type="button" id="pc" value="Establecer" class="btn">
+            </form>
+          </div><hr>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--------------------------- SCRIPTS ---------------------------------------------------------->
+
+<script> 
+  // Cuando se ha renderizado la plantilla se ha pasado en una etiqueta oculta el id del dispositivo
+  // con la intención de utilizarlo cuando el comando se envíe al servidor y este sepa a qué dispositivo corresponde
+  // Almacenamos el valor en id_dispositivo
+  var id_dispositivo = $("#device-id").text()
+  $(document).ready(function(){
+    $("#pc").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#pc_form')[0])
+      $.ajax({
+        url: '/orden/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#pc_status').html(JSON.stringify(data.mute_status, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+  });
+</script>
+
+{% endblock %}

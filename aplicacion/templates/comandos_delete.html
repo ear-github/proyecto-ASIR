@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Medios audiovisuales{% endblock %} {% block contenido %}
+<div class="col-md-10">
+    <div class="panel-primary">
+        <div class="panel-heading">Borrar comando
+        </div>
+        <div class="panel-body">
+            <p>¿Estás seguro de borrar el comando "{{cmd.codigo}}"?</p>
+            <p class="text-danger">Esta acción no podrá deshacerse</p>
+            <form class="form-horizontal" method="post">
+                <div class="form-group">
+                    {{ form.csrf_token }} {{form.si(class="btn btn-primary") }} {{form.no(class="btn btn-primary")}}<br/><br/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

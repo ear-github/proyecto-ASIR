@@ -1,151 +1,128 @@
 {% extends "base.html" %}
 {% block title %}{{device_name}}{% endblock %}
 {% block device %}
-  <h2>Videoproyector: {{device_name}}</h2><span id="device-id" hidden>{{device_id}}</span>
+  
 {% endblock %}
 {% block contenido %}
-<div class="container">
-  <div>
-    <h3>Alimentación: <span id="get_power_status">{{power_status}}</span></h3>
-    <form id="power_form" method="POST" class="form-group">
-      <input type="radio" id ='on' name="parameter" value="ON">ON  
-      <input type="radio" id ='off' name="parameter" value="OFF">OFF
-      <input type="hidden" name="command" value="set_power">
-      <input type="button" id="power" class="command command-power_on" value="POWER" class="btn">
-    </form>
-  </div>
-  <div>
-    <h3>A/V Mute: <span id="get_avmute">{{av_mute}}</span></h3>
-    <form id="av_form" method="POST" class="form-group">
-      <input type="radio" id ='on' name="parameter" value="ON">ON  
-      <input type="radio" id ='off' name="parameter" value="OFF">OFF
-      <input type="hidden" name="command" value="set_avmute">
-      <input type="button" id="avmute" class="command command-av_mute" value="Ajustar" class="btn">
-    </form>
-  </div>
-  <div>
-    <h3>Estado</h3>
-    <div>
-     <h4>Fuente de vídeo: <span id="get_source">{{source}}</span></h4>
-      <form id="source_form" method = "POST" class = "command-form">
-        <input type='radio' id='Computer 1' name='parameter' value='Computer 1' /> Computer 1
-        <input type='radio' id='Computer 2' name='parameter' value='Computer 2' /> Computer 2
-        <input type='radio' id='Video 1' name='parameter' value='Video 1' /> Video 1
-        <input type='radio' id='S-Video' name='parameter' value='S-Video' /> S-Video
-        <input type='radio' id='HDMI' name='parameter' value='HDMI' />HDMI
-        <input type="hidden" name="command" value="set_source">
-        <input type="button" id = "source" value="Ajustar" class = "command-button">
-      </form>
-    </div>
-    <div>
-      <h4>Tipo de imagen: <span id="get_picturesetting">{{picturesetting}}</span></h4>
-      <form id="picture_form" method = "POST" class = "command-form">
-        <input type='radio' id='Brightest' name='parameter' value='Brightest' class="picture"/> Brightest
-        <input type='radio' id='Presentation' name='parameter' value='Presentation' class="picture"/> Presentation
-        <input type='radio' id='Normal' name='parameter' value='Normal' class="picture"/> Normal
-        <input type='radio' id='Theather' name='parameter' value='Theather' class="picture"/> Theather
-        <input type='radio' id='User1' name='parameter' value='User1' class="picture"/>User1
-        <input type='radio' id='User2' name='parameter' value='User2' class="picture"/>User2
-        <input type="hidden" name="command" value="set_picturesetting">
-        <input type="button" id ="picture" value="Ajustar" class = "command-button">
-      </form>
-    </div>
-    <div><div id="brightness_element">
-      <!-- Brillo: -->
-      <form id="brightness_form" method = "POST" class = "command-form">
-          Brillo <input type='number' id='get_brightness' name='parameter' min="0" max="100" value= "{{brightness}}" /> 
-        <input type="hidden" name="command" value="set_brightness">
-        <input type="button" id = "brightness" value="Ajustar" class = "command-button">
-      </form></div>
-    </div>
-    <div><div id="contrast_element">
-      <!-- Contraste:  -->
-      <form id="contrast_form" method = "POST" class = "command-form">
-        Contraste <input type='number' id='get_contrast' name='parameter' min="-50" max="50" value= "{{contrast}}" /> 
-        <input type="hidden" name="command" value="set_contrast">
-        <input type="button" id = "contrast" value="Ajustar" class = "command-button">
-      </form></div>
-    </div>
-    <div>
-      <h4>Relación de aspecto: <span id="get_aspect">{{aspect}}</span></h4>
-      <form id="aspect_form" method = "POST" class = "command-form">
-        <input type='radio' id='Auto' name='parameter' value='Auto' /> Auto
-        <input type='radio' id='Real' name='parameter' value='Real' /> Real
-        <input type='radio' id='4:3' name='parameter' value='4:3' /> 4:3
-        <input type='radio' id='16:9' name='parameter' value='16:9' /> 16:9
-        <input type="hidden" name="command" value="set_aspect">
-        <input type="button" id = "aspect" value="Ajustar" class = "command-button">
-      </form>
-    </div>
-
-    <div><h3>Lámpara</h3>
-      <div><h4>Tiempo: <span id="get_lamphours">{{lamp_hours}}</span> horas, <span id="get_lampminutes">{{lamp_minutes}}</span> minutos.</h4>
-      <div>
-        <h4>Modo de intensidad: <span id="get_lampmode">{{lampmode}}</span></h4>
-        <form id="lampmode_form" method = "POST" class = command-form>
-          <input type='radio' id='Standard' name='parameter' value='Standard'/> Standard
-          <input type='radio' id='Low' name='parameter' value='Low' /> Low
-          <input type="hidden" name="command" value="set_lampmode">
-          <input type="button" id = "lampmode" value="Ajustar" class = "command-button">
-        </form>
-      </div>
-
-    </div>
-    <div><h3>Audio</h3>
-      <div>
-        <div id="contrast_element">
-          <!-- Volumen:  -->
-          <h4>Volumen: <span id="get_volume">{{volume}}</span></h4>
-          <form id="volume_up_form" method = "POST" class = "command-form">
-            <input type="hidden" name="command" value="set_volume">
-            <input type="hidden" name="parameter" value="up">
-            <input type="button" id = "volume_up" value="+" class = "command-button">
+<div class="col-md-10">
+  <div class="panel-primary">
+    <div class="panel-heading">{{device_name}}</div><span id="device-id" hidden>{{device_id}}</span>
+    <div class="panel panel-body">
+      <p class="text-secondary">Puerto: {{port}}</p><hr>
+      <table>  
+        <tr>
+          <h4>Alimentación: <span id="get_power_status">{{power_status}}</span></h4>
+          <form id="power_form" method="POST" class="form-group">
+            <input type="radio" id ='on' name="parameter" value="ON">ON  
+            <input type="radio" id ='off' name="parameter" value="OFF">OFF
+            <input type="hidden" name="command" value="set_power">
+            <input type="button" id="power" class="command command-power_on" value="POWER" class="btn">
           </form>
-          <form id="volume_down_form" method = "POST" class = "command-form">
-            <input type="hidden" name="command" value="set_volume">
-            <input type="hidden" name="parameter" value="down">
-            <input type="button" id = "volume_down" value="- " class = "command-button">
+        </tr><hr>
+        <tr>
+          <h4>A/V Mute: <span id="get_avmute">{{av_mute}}</span></h4>
+          <form id="av_form" method="POST" class="form-group">
+            <input type="radio" id ='on' name="parameter" value="ON">ON  
+            <input type="radio" id ='off' name="parameter" value="OFF">OFF
+            <input type="hidden" name="command" value="set_avmute">
+            <input type="button" id="avmute" class="command command-av_mute" value="Ajustar" class="btn">
           </form>
-        </div>
-    </div>
-
-    </div>
+        </tr><hr>
       
-        
+          <tr>
+           <p>Fuente de vídeo: <span id="get_source">{{source}}</span></p>
+            <form id="source_form" method = "POST" class = "command-form">
+              <input type='radio' id='Computer 1' name='parameter' value='Computer 1' /> Computer 1
+              <input type='radio' id='Computer 2' name='parameter' value='Computer 2' /> Computer 2
+              <input type='radio' id='Video 1' name='parameter' value='Video 1' /> Video 1
+              <input type='radio' id='S-Video' name='parameter' value='S-Video' /> S-Video
+              <input type='radio' id='HDMI' name='parameter' value='HDMI' />HDMI
+              <input type="hidden" name="command" value="set_source">
+              <input type="button" id = "source" value="Ajustar" class = "command-button">
+            </form>
+          </tr><hr>
+          <tr>
+            <p>Tipo de imagen: <span id="get_picturesetting">{{picturesetting}}</span></p>
+            <form id="picture_form" method = "POST" class = "command-form">
+              <input type='radio' id='Brightest' name='parameter' value='Brightest' class="picture"/> Brightest
+              <input type='radio' id='Presentation' name='parameter' value='Presentation' class="picture"/> Presentation
+              <input type='radio' id='Normal' name='parameter' value='Normal' class="picture"/> Normal
+              <input type='radio' id='Theather' name='parameter' value='Theather' class="picture"/> Theather
+              <input type='radio' id='User1' name='parameter' value='User1' class="picture"/>User1
+              <input type='radio' id='User2' name='parameter' value='User2' class="picture"/>User2
+              <input type="hidden" name="command" value="set_picturesetting">
+              <input type="button" id ="picture" value="Ajustar" class = "command-button">
+            </form>
+          </tr>
+          <tr><div id="brightness_element">
+            <!-- Brillo: -->
+            <form id="brightness_form" method = "POST" class = "command-form">
+                Brillo <input type='number' id='get_brightness' name='parameter' min="0" max="100" value= "{{brightness}}" /> 
+              <input type="hidden" name="command" value="set_brightness">
+              <input type="button" id = "brightness" value="Ajustar" class = "command-button">
+            </form>
+          </div>
+            <div id="contrast_element">
+            <!-- Contraste:  -->
+            <form id="contrast_form" method = "POST" class = "command-form">
+              Contraste <input type='number' id='get_contrast' name='parameter' min="-50" max="50" value= "{{contrast}}" /> 
+              <input type="hidden" name="command" value="set_contrast">
+              <input type="button" id = "contrast" value="Ajustar" class = "command-button">
+            </form></div>
+          </tr><hr>
+          <tr>
+            <p>Relación de aspecto: <span id="get_aspect">{{aspect}}</span></p>
+            <form id="aspect_form" method = "POST" class = "command-form">
+              <input type='radio' id='Auto' name='parameter' value='Auto' /> Auto
+              <input type='radio' id='Real' name='parameter' value='Real' /> Real
+              <input type='radio' id='4:3' name='parameter' value='4:3' /> 4:3
+              <input type='radio' id='16:9' name='parameter' value='16:9' /> 16:9
+              <input type="hidden" name="command" value="set_aspect">
+              <input type="button" id = "aspect" value="Ajustar" class = "command-button">
+            </form>
+          </tr><hr>
+  
+            <tr>
+              <h4>Lámpara</h4>
+              <p>Tiempo: <span id="get_lamphours">{{lamp_hours}}</span> horas, <span id="get_lampminutes">{{lamp_minutes}}</span> minutos.</p>
+            </tr>
+            <tr>
+              <p>Modo de intensidad: <span id="get_lampmode">{{lampmode}}</span></p>
+              <form id="lampmode_form" method = "POST" class = command-form>
+                <input type='radio' id='Standard' name='parameter' value='Standard'/> Standard
+                <input type='radio' id='Low' name='parameter' value='Low' /> Low
+                <input type="hidden" name="command" value="set_lampmode">
+                <input type="button" id = "lampmode" value="Ajustar" class = "command-button">
+              </form>
+            </tr><hr>
+          <div><h4>Audio</h4>
+            <tr>
+              <div>
+                <!-- Volumen:  -->
+                <p>Volumen: <span id="get_volume">{{volume}}</span></p>
+                <form id="volume_up_form" method = "POST" class = "command-form">
+                  <input type="hidden" name="command" value="set_volume">
+                  <input type="hidden" name="parameter" value="up">
+                  <input type="button" id = "volume_up" value="+" class = "command-button">
+                </form>
+                <form id="volume_down_form" method = "POST" class = "command-form">
+                  <input type="hidden" name="command" value="set_volume">
+                  <input type="hidden" name="parameter" value="down">
+                  <input type="button" id = "volume_down" value="- " class = "command-button">
+                </form>
+              </div>
+            </tr>
+          </div>
+      </table>
     </div>
   </div>
 </div>
-  <br>
-    <button type='submit' value='Submit' id='submit'>Refrescar valores</button>
-  <div id= "results"></div>
+<div id= "results"></div>
 
 <!-- Aquí van los scripts -->
 
-<script> // Comprueba los valores del dispositivo y los actualiza en pantalla
-  // function check_projector_status(){
-  //   $.ajax({ 
-  //   url: '/proyector/status',
-  //   success: function(data){
-  //     jsonpower = JSON.stringify(data.power_status, null, '');
-  //     jsonpower = jsonpower.replace(/"/g, "");
-  //     $('#get_power_status').html(jsonpower);
-  //     $('#get_source').html(JSON.stringify(data.source, null, ''));
-  //     $('#get_picturesetting').html(JSON.stringify(data.picturesetting, null, ''));
-  //     $('#get_aspect').html(JSON.stringify(data.aspect, null, ''));
-  //     $('#get_lamphours').html(JSON.stringify(data.lamp_hours, null, ''));
-  //     $('#get_lampminutes').html(JSON.stringify(data.lamp_minutes, null, ''));
-  //     $('#get_lampmode').html(JSON.stringify(data.lampmode, null, ''));
-  //     }
-  //   });
-  // }
-
-  // function projector_command(cmd){ // envía el comando y actualiza los valores
-  //   $.ajax({
-  //     url: '/proyector/' + cmd,
-  //     success: check_projector_status()
-  //   })
-  // }
-
+<script> 
+  
   var id_dispositivo = $("#device-id").text()
   // Cuando se ha renderizado la plantilla se ha pasado en una etiqueta oculta el id del dispositivo
   // con la intención de utilizarlo cuando el comando se envíe al servidor y este sepa a qué dispositivo corresponde

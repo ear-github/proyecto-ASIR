@@ -1,57 +1,61 @@
 {% extends "base.html" %}
 {% block title %}{{device_name}}{% endblock %}
 {% block contenido %}
-
-  <h2>Mezclador: {{device_name}}</h2><span id="device-id" hidden>{{device_id}}</span>
-  <p class="text-secondary">Puerto: {{port}}</p><br>
-  <div>
-    <div>
-      <label for="mute_status">Mute: </label>
-      <span id="mute_status">{{mute_status}}</span>
-      <form id="mute_form" method="POST" class="form-group">
-        <input type="radio" id ='on' name="parameter" value="ON">ON  
-        <input type="radio" id ='off' name="parameter" value="OFF">OFF
-        <input type="hidden" name="command" value="set_mute">
-        <input type="button" id="mute" class="command command-mute" value="Establecer" class="btn">
-      </form>
-    </div>
-  <!--   <p>Mute: <span id="mute_status">{{mute_status}}</span><span id="device-id" hidden>{{device_id}}</span>
-    <button id="mute_on_button" class="command command-mute_on" value="mute_on"> MUTE ON </button>
-    <button id="mute_off_button" class="command command-mute_off" value="mute_off"> MUTE OFF </button> -->
-
-    <h3>Volumen:</h3>
-    <div class="ui-content">
-      <form id="master_form" method = "POST" class="command-form">
-        <label for="master_status">Master: </label><input type="text" class="valuebox" id="master-value" value="{{master_status}}" readonly>
-        <div class="volume-range">
-          <input type='range' id='master_status' name='parameter' min="0" max="64" value="{{master_status}}" onchange="updateMasterValue(this.value);">
+<div class="col-md-10">
+  <div class="panel-primary">
+    <div class="panel-heading">{{device_name}}</div><span id="device-id" hidden>{{device_id}}</span>
+      <div class="panel-body">
+        <p class="text-secondary">Puerto: {{port}}</p><hr>
+        <div>
+          <div>
+            <label for="mute_status">Mute: </label>
+            <span id="mute_status">{{mute_status}}</span>
+            <form id="mute_form" method="POST" class="form-group">
+              <input type="radio" id ='on' name="parameter" value="ON">ON  
+              <input type="radio" id ='off' name="parameter" value="OFF">OFF
+              <input type="hidden" name="command" value="set_mute">
+              <input type="button" id="mute" class="command command-mute" value="Establecer" class="btn">
+            </form>
+          </div><hr>
+        <!--   <p>Mute: <span id="mute_status">{{mute_status}}</span><span id="device-id" hidden>{{device_id}}</span>
+          <button id="mute_on_button" class="command command-mute_on" value="mute_on"> MUTE ON </button>
+          <button id="mute_off_button" class="command command-mute_off" value="mute_off"> MUTE OFF </button> -->
+  
+          <h4>Volumen:</h4>
+          <div>
+            <form id="master_form" method = "POST" class="command-form">
+              <label for="master_status">Master: </label><input type="text" class="valuebox" id="master-value" value="{{master_status}}" readonly>
+              <div class="volume-range">
+                <input type='range' id='master_status' name='parameter' min="0" max="64" value="{{master_status}}" onchange="updateMasterValue(this.value);">
+              </div>
+              <input type="hidden" name="command" value="set_master_vol">
+              <input type="button" id = "master" value="Ajustar" class = "command-button">
+            </form>
+          </div><br>
+          <div>
+            <form id="mic_form" method = "POST" class="command-form">
+              <label for="mic_status">Micrófono: </label><input type="text" class="valuebox" id="mic-value" value="{{mic_status}}" readonly>
+              <div class="volume-range">
+                <input type='range' id='mic_status' name='parameter' min="0" max="64" value="{{mic_status}}" onchange="updateMicValue(this.value);"/>
+              </div> 
+              <input type="hidden" name="command" value="set_mic_vol">
+              <input type="button" id = "mic" value="Ajustar" class = "command-button">
+            </form>
+          </div><br>
+          <div>
+            <form id="line1_form" method = "POST" class = "command-form">
+              <label for="line1_status">Línea 1: </label><input type="text" class="valuebox" id="line1-value" value="{{line1_status}}" readonly>
+              <div class="volume-range">
+                <input type='range' id='line1_status' name='parameter' min="0" max="64" value= "{{line1_status}}" onchange="updateLine1Value(this.value);"/>
+              </div>
+              <input type="hidden" name="command" value="set_line1_vol">
+              <input type="button" id="line1" value="Ajustar" class="command-button">
+            </form>
+          </div>
         </div>
-        <input type="hidden" name="command" value="set_master_vol">
-        <input type="button" id = "master" value="Ajustar" class = "command-button">
-      </form>
-    </div>
-    <div><br>
-      <form id="mic_form" method = "POST" class="command-form">
-        <label for="mic_status">Micrófono: </label><input type="text" class="valuebox" id="mic-value" value="{{mic_status}}" readonly>
-        <div class="volume-range">
-          <input type='range' id='mic_status' name='parameter' min="0" max="64" value="{{mic_status}}" onchange="updateMicValue(this.value);"/>
-        </div> 
-        <input type="hidden" name="command" value="set_mic_vol">
-        <input type="button" id = "mic" value="Ajustar" class = "command-button">
-      </form>
-    </div>
-    <div><br>
-      <form id="line1_form" method = "POST" class = "command-form">
-        <label for="line1_status">Línea 1: </label><input type="text" class="valuebox" id="line1-value" value="{{line1_status}}" readonly>
-        <div class="volume-range">
-          <input type='range' id='line1_status' name='parameter' min="0" max="64" value= "{{line1_status}}" onchange="updateLine1Value(this.value);"/>
-        </div>
-        <input type="hidden" name="command" value="set_line1_vol">
-        <input type="button" id="line1" value="Ajustar" class="command-button">
-      </form>
     </div>
   </div>
-
+</div>
 <!--   <div>
     <form id="port_form">
       <label for="portname">Puerto asignado:</label>

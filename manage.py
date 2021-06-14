@@ -13,6 +13,15 @@ def create_tables():
     categoria=Categorias(id=0,nombre="Todos")
     db.session.add(categoria)
     db.session.commit()
+    # dispositivo=Dispositivos(id=0,nombre="Ninguno", CategoriaId=0)
+    # db.session.add(dispositivo)
+    # db.session.commit()
+    # comando=Comandos(id=0,descripcion="Ninguna", DispositivoId=0)
+    # db.session.add(comando)
+    # db.session.commit()
+    # parametro=Parametros(id=0,descripcion="Ninguna", ComandoId=0)
+    # db.session.add(parametro)
+    # db.session.commit()
 
 @manager.command
 def drop_tables():
@@ -23,15 +32,17 @@ def drop_tables():
 def add_data_tables():
     db.create_all()
 
-    categorias = ("Videoproyector","Mezclador","Pantalla")
+    categorias = ("Videoproyector","Mezclador","Pantalla", "PC")
     for cat in categorias:
         categoria=Categorias(nombre=cat)
         db.session.add(categoria)
         db.session.commit()
 
     dispositivos=[
-    {"nombre":"Mitsubmshi EX320U","CategoriaId":1,"puerto":"/dev/ttyUSB0","imagen":"mitsubishi_ex320u.jpg","descripcion":"Videoproyector DLP de la marca Mitsubishi", "archivoHTML":"vp_ex320u.html", "archivoPY":"vp_ex320u.py"},
-    {"nombre":"Ecler CA-40","CategoriaId":2,"puerto":"/dev/ttyUSB1", "imagen":"ecler_ca40.jpg","descripcion":"Mezclador compacto de una entrada de micro más una entrada de línea a escoger entre dos posibles. Incluye amplificador de 40 W y control por RS-232", "archivoHTML":"mx_ca40.html", "archivoPY":"mx_ca40.py"}    
+    {"nombre":"Mitsubmshi EX320U","CategoriaId":1,"puerto":"/dev/ttyUSB0","ip" : "", "mac" : "","imagen":"mitsubishi_ex320u.jpg","descripcion":"Videoproyector DLP de la marca Mitsubishi", "archivoHTML":"vp_ex320u.html", "archivoPY":"vp_ex320u.py"},
+    {"nombre":"Ecler CA-40","CategoriaId":2,"puerto":"/dev/ttyUSB1", "ip" : "", "mac" : "","imagen":"ecler_ca40.jpg","descripcion":"Mezclador compacto de una entrada de micro más una entrada de línea a escoger entre dos posibles. Incluye amplificador de 40 W y control por RS-232", "archivoHTML":"mx_ca40.html", "archivoPY":"mx_ca40.py"},
+    {"nombre":"Pantalla simulada","CategoriaId":3,"puerto":"GPIO","ip" : "", "mac" : "","imagen":"pt_simulada.jpg","descripcion":"Motor DC que simula el movimiento de una pantalla de proyección real", "archivoHTML":"pt_simulada.html", "archivoPY":"pt_simulada.py"},
+    {"nombre":"PC del aula 00 (RPi)","CategoriaId":4,"puerto":"ssh","ip" : "192.168.88.254", "mac" : "b8:27:eb:cb:1e:15","imagen":"pc_aula.jpeg","descripcion":"Se apaga por SSH y se enciende por WOL (no soportado en RPi).", "archivoHTML":"pc_aula.html", "archivoPY":"pc_aula.py"},    
     ]
 
     for disp in dispositivos:
@@ -82,6 +93,8 @@ def add_data_tables():
     {"descripcion":"CA40-Subir/Bajar el volumen maestro del mezclador","codigo":"master_vol_up_down","DispositivoId":2},
     {"descripcion":"CA40-Subir/Bajar el volumen de micrófono del mezclador","codigo":"mic_vol_up_down","DispositivoId":2},
     {"descripcion":"CA40-Subir/Bajar el volumen de línea del mezclador","codigo":"line1_vol_up_down","DispositivoId":2},
+    {"descripcion":"Pantalla-Mover (simulación)","codigo":"set_screen","DispositivoId":3},
+    {"descripcion":"PC-Alimentación","codigo":"set_power","DispositivoId":4}
     ]
     for com in comandos:
         comando=Comandos(**com)
@@ -126,6 +139,11 @@ def add_data_tables():
     {"descripcion":"CA40-Bajar volumen de micrófono del mezclador", "valor":"down", "ComandoId":37},
     {"descripcion":"CA40-Subir volumen de línea del mezclador", "valor":"up", "ComandoId":38},
     {"descripcion":"CA40-Bajar volumen de línea del mezclador", "valor":"down", "ComandoId":38},
+    {"descripcion":"Pantalla-Bajar", "valor":"down", "ComandoId":39},
+    {"descripcion":"Pantalla-Subir", "valor":"up", "ComandoId":39},
+    {"descripcion":"Pantalla-Parar", "valor":"stop", "ComandoId":39},
+    {"descripcion":"PC-Encender", "valor":"on", "ComandoId":40},
+    {"descripcion":"PC-Apagar", "valor":"off", "ComandoId":40}
     ]
     for p in parametros:
         parametro=Parametros(**p)
@@ -148,7 +166,15 @@ def add_data_tables():
     {"accion":"Pánico. Restablecer valores de proyector y mezclador","tecla": "0",  "ParametroId":28},
     {"accion":"Pánico. Restablecer valores de proyector y mezclador","tecla": "0",  "ParametroId":30},
     {"accion":"Pánico. Restablecer valores de proyector y mezclador","tecla": "0",  "ParametroId":4},
-    {"accion":"Pánico. Restablecer valores de proyector y mezclador","tecla": "0",  "ParametroId":9}
+    {"accion":"Pánico. Restablecer valores de proyector y mezclador","tecla": "0",  "ParametroId":9},
+    {"accion":"Pánico. Restablecer valores de proyector y mezclador","tecla": "0",  "ParametroId":39},
+    {"accion":"Encendido del sistema","tecla": "1", "ParametroId":38},
+    {"accion":"Apagado del sistema","tecla": "6", "ParametroId":37},
+    {"accion":"Subir pantalla y mutear proyector","tecla": "2", "ParametroId":37},
+    {"accion":"Bajar pantalla y desmutear proyector","tecla": "7", "ParametroId":38},
+    {"accion":"Encendido del sistema","tecla": "1", "ParametroId":38},
+    {"accion":"Encendido del sistema","tecla": "1", "ParametroId":40},
+    {"accion":"Apagado del sistema","tecla": "1", "ParametroId":41},
     ]
     for b in botones:
         boton=Botones(**b)

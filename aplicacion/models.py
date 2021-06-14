@@ -10,7 +10,7 @@ class Categorias(db.Model):
 	id = Column(Integer, primary_key=True)
 	nombre = Column(String(100))
 	# modelo = relationship("Modelos", cascade="all, delete-orphan", backref="Categorias",lazy='dynamic', back_populates="parent")
-	modelo = relationship("Dispositivos", cascade="all, delete-orphan", backref="Categorias",lazy='dynamic')
+	dispositivo = relationship("Dispositivos", cascade="all, delete-orphan", backref="Categorias",lazy='dynamic')
 
 
 	def __repr__(self):
@@ -25,6 +25,8 @@ class Dispositivos(db.Model):
 	descripcion = Column(String(255))
 	imagen = Column(String(255))
 	puerto = Column(String(100))
+	ip = Column(String(100))
+	mac = Column(String(100))
 	archivoHTML = Column(String(255))
 	archivoPY = Column(String(255))
 	# stock = Column(Integer,default=0)
@@ -42,7 +44,8 @@ class Comandos(db.Model):
 	descripcion = Column(String(100))
 	codigo = Column(String(255))
 	DispositivoId = Column(Integer,ForeignKey('dispositivos.id'), nullable=False)
-	parametro = relationship("Parametros", backref = "Comandos")
+	dispositivo = relationship("Dispositivos", backref = "Comandos")
+	parametro = relationship("Parametros", cascade="all,delete-orphan", backref = "Comandos", lazy = "dynamic")
 
 	def __repr__(self):
 		return (u'<{self.__class__.__name__}: {self.id}>'.format(self=self))
@@ -55,7 +58,8 @@ class Parametros(db.Model):
 	descripcion = Column(String(100))
 	valor = Column(String(255))
 	ComandoId = Column(Integer,ForeignKey('comandos.id'), nullable=False)
-	boton = relationship("Botones", backref="Parametros")
+	comando = relationship("Comandos", backref = "Parametros")
+	boton = relationship("Botones", cascade="all,delete-orphan",backref="Parametros", lazy = "dynamic")
 
 	def __repr__(self):
 		return (u'<{self.__class__.__name__}: {self.id}>'.format(self=self))
@@ -67,6 +71,7 @@ class Botones(db.Model):
 	accion = Column(String(100))
 	tecla = Column(String(255))
 	ParametroId = Column(Integer,ForeignKey('parametros.id'), nullable=False)
+	parametro = relationship("Parametros", backref ="Botones")
 	
 
 	def __repr__(self):

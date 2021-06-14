@@ -14,6 +14,8 @@ class formDispositivo(FlaskForm):
 	nombre=StringField("Nombre:",validators=[Required("Tienes que introducir el dato")])
 	CategoriaId=SelectField("Categoría:",coerce=int)
 	puerto=StringField("Puerto:",default="/dev/ttyUSB0" ,validators=[Required("Tienes que introducir el dato")])
+	ip=StringField("Dirección IP (si es requerido)")
+	mac=StringField("Dirección MAC (si es requerida)")
 	descripcion= TextAreaField("Descripción:")
 	imagen = FileField('Selecciona imagen:')
 	archivoHTML = FileField ('Sube la página del dispositivo')

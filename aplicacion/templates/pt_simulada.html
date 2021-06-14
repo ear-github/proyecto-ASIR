@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}{{device_name}}{% endblock %}
+{% block contenido %}
+<div class="col-md-10">
+  <div class="panel-primary">
+    <div class="panel-heading">{{device_name}}</div><span id="device-id" hidden>{{device_id}}</span>
+      <div class="panel-body">
+        <p class="text-secondary">Puerto: {{port}}</p><hr>
+        <div>
+          <div>
+            <label for="screen_status">Movimiento: </label>
+            <span id="screen_status">{{screen_status}}</span>
+            <form id="screen_form" method="POST" class="form-group">
+              <input type="radio" id ='up' name="parameter" value="up">Subir
+              <input type="radio" id ='down' name="parameter" value="down">Bajar
+              <input type="radio" id ='stop' name="parameter" value="stop">Parar
+              <input type="hidden" name="command" value="set_screen">
+              <input type="button" id="screen" class="command command-mute" value="Establecer" class="btn">
+            </form>
+          </div><hr>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--------------------------- SCRIPTS ---------------------------------------------------------->
+
+<script> 
+// function updateMasterValue(val) {
+//           document.getElementById('master-value').value=val; 
+//         }
+// function updateMicValue(val) {
+//           document.getElementById('mic-value').value=val; 
+//         }
+// function updateLine1Value(val) {
+//           document.getElementById('line1-value').value=val; 
+//         }
+
+
+// Comprueba los valores del dispositivo y los actualiza en pantalla
+  // function check_mixer_status(){
+  //   $.ajax({ 
+  //   url: '/mezclador/status',
+  //   success: function(data){
+  //     jsonpower = JSON.stringify(data.power_status, null, '');
+  //     jsonpower = jsonpower.replace(/"/g, "");
+  //     $('#get_power_status').html(jsonpower);
+  //     $('#get_source').html(JSON.stringify(data.source, null, ''));
+  //     $('#get_picturesetting').html(JSON.stringify(data.picturesetting, null, ''));
+  //     $('#get_aspect').html(JSON.stringify(data.aspect, null, ''));
+  //     $('#get_lamphours').html(JSON.stringify(data.lamp_hours, null, ''));
+  //     $('#get_lampminutes').html(JSON.stringify(data.lamp_minutes, null, ''));
+  //     $('#get_lampmode').html(JSON.stringify(data.lampmode, null, ''));
+  //     }
+  //   });
+  // }
+
+  // function projector_command(cmd){ // envía el comando y actualiza los valores
+  //   $.ajax({
+  //     url: '/proyector/' + cmd,
+  //     success: check_projector_status()
+  //   })
+  // }
+
+  // var id_dispositivo = $("#device-id").text()
+  // Cuando se ha renderizado la plantilla se ha pasado en una etiqueta oculta el id del dispositivo
+  // con la intención de utilizarlo cuando el comando se envíe al servidor y este sepa a qué dispositivo corresponde
+  // Almacenamos el valor en id_dispositivo
+  var id_dispositivo = $("#device-id").text()
+  $(document).ready(function(){
+    $("#screen").click(function(e){
+      e.preventDefault();
+      const data = new FormData($('#screen_form')[0])
+      $.ajax({
+        url: '/orden/' + id_dispositivo,
+        type: 'POST',
+        data: data,
+        processData: false,
+        contentType: false,
+        success: function(data){
+          $('#screen_status').html(JSON.stringify(data.mute_status, null, ''));
+        },
+        error: function(error){
+          console.log("Error");
+        }
+      })
+      return false;
+      // alert("form enviado");
+    });
+  });
+</script>
+
+{% endblock %}
